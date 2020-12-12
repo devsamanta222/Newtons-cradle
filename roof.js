@@ -10,7 +10,7 @@ class Roof{
         
     }
     display(){
-        fill("white")
+        fill("black")
         strokeWeight(4)
         stroke("black")
         rectMode(CENTER)

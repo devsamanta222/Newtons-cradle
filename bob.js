@@ -1,5 +1,5 @@
 class Bob{
-    constructor(x,y){
+    constructor(x,y,radius){
         
         var options={
             isStatic:false,
@@ -9,26 +9,25 @@ class Bob{
 
         }
         
-        this.body=Bodies.circle(x,y,40,options)
+        this.body=Bodies.circle(x,y,radius,options)
         World.add(world,this.body)
-        
+        this.radius=radius        
 
     }
     display(){
         
-        strokeWeight(4)
-        stroke("blue")
+      
         fill("blue")
     
         push()
-        translate(0,0)
-        rotate(this.body.angle)
-
-        image(this.image,this.body.position.x,this.body.position.y,20,10)
-
-
         
-        circle(0,0,40)
+        
+
+       
+
+
+        ellipseMode(RADIUS)
+        ellipse(this.body.position.x,this.body.position.y,this.radius,this.radius)
         pop()
     }
 }
